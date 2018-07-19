@@ -53,7 +53,7 @@ export default {
   data () {
     return {
       api_url: 'http://api.openweathermap.org/data/2.5/forecast?q=kagoshima-shi,jp&APPID=',
-      api_key: '', //My API Key
+      api_key: '', // My API Key
       msg: 'welcome',
       weather_time: '',
       weather: '',
