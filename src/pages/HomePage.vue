@@ -52,7 +52,8 @@ export default {
   name: 'home-page',
   data () {
     return {
-      geturl: 'http://api.openweathermap.org/data/2.5/forecast?q=kagoshima-shi,jp&APPID=fc89915741cbc737bd3188d3c6846b80',
+      api_url: 'http://api.openweathermap.org/data/2.5/forecast?q=kagoshima-shi,jp&APPID=',
+      api_key: '', //My API Key
       msg: 'welcome',
       weather_time: '',
       weather: '',
@@ -90,6 +91,11 @@ export default {
       const newWindow = window.open(url, '_blank')
       newWindow.opener = null
       newWindow.location = url
+    }
+  },
+  computed: {
+    geturl: function () {
+      return this.api_url + this.api_key
     }
   },
   mounted () {
